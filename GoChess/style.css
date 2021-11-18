@@ -1,0 +1,713 @@
+/* ---------------------- basic layout setup---------------------------------- */
+/* in this part, I clear up the web browser layout to none, and apply a overall font sizes and use rem for my overall page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('image/cursor.png') 51 51, auto;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 1.6rem;
+
+}
+
+
+
+/* ----------------------typegrahic---------------------------------- */
+/*in this part, i set up basic style*/
+
+h1{
+    font-weight: 900;
+    font-size: 6rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+
+h2{
+    font-weight: 800;
+    font-size: 6rem;
+    padding: 24px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    margin-left: 60px;
+    color: white;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+h4{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+a {
+
+    color: white;
+}
+
+
+
+
+
+/*--------------------------------------- layout ------------------------------------*/
+/* i set up a container to every section to control them easily. */
+
+
+.container{
+
+
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+
+
+
+/*--------------------------------------- nav ------------------------------------*/
+/* this part is my nav design including the logo and nav menu*/
+
+
+.navbar{
+    padding: 0px 30px; 
+    height: 15vh;
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a{
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar li{
+    float: left;
+    padding: 0 20px;
+}
+
+
+/* Copyright (c) 2021 by Paul van Oijen (https://codepen.io/PaulVanO/pen/XJYGNQ) view the orignal work https://codepen.io/PaulVanO/pen/XJYGNQ */
+/* this animate is from Paul van Oijen, i like it very much, for apply it all the time, I slipit it from its orginal code, and the put it here*/
+.navbar a {
+    display: block;
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  .navbar a:hover:after, a:focus:after, a:active:after {
+    width: 100%;
+  }
+  .navbar a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #FFF;
+    transition: 0.35s;
+  }
+
+
+/*-------------------------- HOME PAGE ------------------------------*/
+/* this part is home page section */
+
+/* some layout setting for the home page */
+.title{
+    padding-left: 50px;
+    height: 150px;
+}
+
+.quote{
+    font: 20px;
+    color: rgb(0, 0, 0);
+    height: 120px;
+    z-index: -10;
+}
+
+.p-position{
+    width: 500px;
+    margin-top: 30px;
+    margin-right: 50px;
+    float: right;
+    
+}
+
+.section-home{
+    height: 85vh;
+    background-color: white;
+    background-image: url(image/test.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+/* from here i start working on my home card section */
+
+.card-section{
+    padding: 30px 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    margin-bottom: 50px;
+}
+
+
+/* i face a problem, which is that i cannot align the item inside of card. i use the [grid-template-row] to divied
+space into three parts, for making each item gets its own space*/
+.card {
+    height: 40vh;
+    display: grid;
+    grid-template-rows: repeat(2,80px);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+/* in my design, few btn design appears, so I put the btn in this section where it stands. */
+.btn-findit {
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 150px;
+    height: 50px;
+    padding-top: 10px;
+	display: inline-block;
+    border-radius: 100px;
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.btn-findit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+}
+
+
+/*---------------------------- INTRODUCTION PAGE introduction section -------------------------*/
+.sectionIntroduction {
+    background-color: rgb(43, 43, 43);
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.introductionCard {
+    
+    background-image: url(image/fisstthird.png);
+    background-size: 100% 100%;
+    width: 60vw;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+
+/* the introduction card get three different card so that i set different layout for each */
+.second-introcard {
+    grid-template-columns: 3fr 2fr;
+    background-image: url(image/second.png);
+    background-size: 100% 100%;
+}
+
+.introductionCard:last-child {
+    margin-bottom: 150px;   
+}
+
+/* the card divides into left and right part, and this part i am trying a lot how to vertical alian center for the text
+at last, I use parent div relative and orginal div for absolute to ajust the text into vertical center
+*/
+
+.introCardleft{
+    position: relative;
+    color: black;
+
+}
+
+.introCardleft h4{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 150px;
+    height: 130px;
+    transform:translate3d(-50%,-100%,0);
+}
+
+
+
+.introCardright{
+
+    color: white;
+    padding: 80px;
+
+}
+
+
+
+.introCardleft h4{
+    width: 150px;
+}
+
+
+/*------------------------------- RULE PAGE section rule ------------------------------------*/
+
+.sectionRule {
+    background-color: rgb(17, 17, 17);
+    background-image: url(image/grid.png);
+    background-size: cover;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.ruleCard {
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 70px;
+    /* transform: translateY(100px); */
+
+}
+
+
+.ruleDiv {
+    
+    padding: 30px;
+    padding-bottom: 70px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* ----------------------------- HISTORY PAGE section history -------------------------------*/
+
+/* this is the history page overall setting */
+.sectionHistory {
+    background-color: rgb(17, 17, 17);
+    background-size: cover;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    padding-bottom: 100px;
+
+}
+
+
+/* this part is for the photo part of the history page */
+.sectionPhotoshow {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 100px;
+}
+
+.gochessPhoto img {
+    opacity: 0.9;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.gochessPhoto img:hover {
+    opacity: 1;
+
+    transform: scale(1.03);
+}
+
+/* after the img part, I get the card part blew */
+
+.historyCard {
+    width: 60vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px solid #e6e6e6;
+}
+
+.historyCard:hover {
+    background-color: #FFF;
+    color: black;
+    transition: all 0.2s;
+}
+
+
+
+
+
+
+
+
+
+/*----------------------------------- FOOTER ---------------------------------------*/
+
+footer{
+    background-color: black;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.website-footer{
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.website-footer img{
+    width: 130px;
+}
+
+.columnwidth{
+
+    margin-bottom: 30px;
+
+}
+
+.website-details{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.website-details img{
+    width: 80px;
+}
+
+
+/*----------------------------- media breakpoint -------------------------------------------*/
+/* I start the media screen change here */
+
+
+@media only screen and (max-width: 1200px) {
+
+
+
+/* change for home page */
+    .section-home{
+        height: auto;
+    }
+
+    .quote{
+        font: 1.8rem;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+    }
+
+    .card-section{
+        padding: 0px 150px;
+        display: block;
+        
+    }
+
+    .card {
+        margin-top: 60px;
+        min-width: 400px;
+    }
+
+
+/* change for introduction page, here, I changed the introductioncard to top&bottom part to fit the screen sizes */
+.introductionCard {
+    display: block;
+    background-image: none;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.introCardright{
+
+    background-color: black;
+    padding: 80px;
+
+}
+
+.introCardleft{
+    height: 300px;
+    color: rgb(0, 0, 0);
+    padding: 50px;
+
+}
+
+
+.introCardleft h4{
+padding-top: 20px;
+width: 250px;
+}
+
+
+/* the rule page change */
+.ruleCard{
+    margin-right: auto;
+    margin-left: auto;
+    width: 75vw;
+}
+
+/* the history page change */
+.historyCard {
+    width: 70vw;
+}
+
+
+.sectionPhotoshow {
+    width: 100%;
+}
+}
+
+/* When the screen decrease down to 700px, i add the hamburger mueum and change some layout. */
+
+@media only screen and (max-width: 700px) {
+
+    html{
+        font-size: 8px;
+    }
+
+    h2{
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-bottom: 30px;
+        font-size: 3rem;
+    }
+    
+
+    /* introduction page change while scrren size change */
+
+    .introductionCard {
+        width: 80vw;
+
+    }
+
+    .introCardleft{
+        position: relative;
+        color: black;
+    
+    }
+
+
+
+    /* home page change while screen size change */
+    .title{
+        padding-left: 20px;
+    }
+
+
+    .container{
+        padding: 10px;
+    
+    }
+
+    .p-position{
+        width: 300px; 
+        margin-right: 20px;
+    }
+
+    /* card sizes are very different according to different screen view, i adjust them a litte according to different suitation*/
+    .card-section{
+        padding: 0px 0px;       
+    }
+
+    .card {
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 320px;
+        min-width: 300px;
+        
+    }
+
+    /* footer change while the screen size decrease down to 700p */
+    .ruleCard{
+        margin-right: auto;
+        margin-left: auto;
+        width: 80vw;
+    }
+
+    /* the go chess next to the text div is img, when the screnn decrease, I hide it. */
+    .ruleCard img{
+        width: 0px;
+    }
+
+
+
+
+    /* footer change while the screen size decrease down to 700px */
+
+    .columnwidth{
+        padding: 1px;
+        max-width: 200px;
+        margin-bottom: 30px;
+        word-break: break-all;
+    
+    }
+    
+    .website-details{
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        justify-content: space-between;
+    }
+
+
+
+    /* ----------------------- scourced from codepen  --------------------------- */
+    /* This is a full screnn menu from Paul van Oijen, I compile the orignal scss to css, in that way, it looks a litte different and messy. */
+    /* Copyright (c) 2021 by Paul van Oijen (https://codepen.io/PaulVanO/pen/XJYGNQ) view the orignal work https://codepen.io/PaulVanO/pen/XJYGNQ */
+
+
+    .navbar li{
+        width: 100vw;
+    }
+
+    .button_container {
+        position: fixed;
+        top: 5%;
+        right: 2%;
+        height: 27px;
+        width: 35px;
+        cursor: pointer;
+        z-index: 9999;
+        transition: opacity 0.25s ease;
+      }
+      .button_container:hover {
+        opacity: 0.7;
+      }
+      .button_container.active .top {
+        transform: translateY(11px) translateX(0) rotate(45deg);
+        background: #FFF;
+      }
+      .button_container.active .middle {
+        opacity: 0;
+        background: #FFF;
+      }
+      .button_container.active .bottom {
+        transform: translateY(-11px) translateX(0) rotate(-45deg);
+        background: #FFF;
+      }
+      .button_container span {
+        background: #e6e6e6;
+        border: none;
+        height: 5px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.35s ease;
+        cursor: pointer;
+      }
+      .button_container span:nth-of-type(2) {
+        top: 11px;
+      }
+      .button_container span:nth-of-type(3) {
+        top: 22px;
+      }
+      
+      .overlay {
+        position: fixed;
+        background: #222222;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+        overflow: hidden;
+        z-index: 999;
+      }
+
+      .overlay.open {
+        opacity: 0.9;
+        visibility: visible;
+        height: 100%;
+      }
+      .overlay.open li {
+        animation: fadeInRight 0.5s ease forwards;
+        animation-delay: 0.35s;
+      }
+      .overlay.open li:nth-of-type(2) {
+        animation-delay: 0.4s;
+      }
+      .overlay.open li:nth-of-type(3) {
+        animation-delay: 0.45s;
+      }
+      .overlay.open li:nth-of-type(4) {
+        animation-delay: 0.5s;
+      }
+      .overlay nav {
+        position: relative;
+        height: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 5rem;
+        font-weight: 400;
+        text-align: center;
+      }
+      .overlay ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+        height: 100%;
+      }
+      .overlay ul li {
+        display: block;
+        height: 25%;
+        height: calc(100% / 4);
+        min-height: 50px;
+        position: relative;
+        opacity: 0;
+      }
+
+      
+      @keyframes fadeInRight {
+        0% {
+          opacity: 0;
+          left: 20%;
+        }
+        100% {
+          opacity: 1;
+          left: 0;
+        }
+      }
+
+}
