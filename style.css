@@ -1,0 +1,9 @@
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    padding: 20px;
+}
